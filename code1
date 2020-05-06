@@ -1,0 +1,8 @@
+function countNaN(arr){
+    let count = 0;
+    for ( i in arr){
+        if (Number.isNaN(arr[i])) count++;
+    }
+    return count;
+}
+console.log(countNaN([NaN, 1, NaN + 1, "a" * 2]))
