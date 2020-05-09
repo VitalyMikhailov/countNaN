@@ -1,8 +1,9 @@
-function countNaN(arr){
+function minPositive(arr){
     let count = 0;
-    for ( i in arr){
-        if (Number.isNaN(arr[i])) count++;
+    let newArr = []
+    for (let i = 0; i< arr.length; i++){
+        if (arr[i]>0) {newArr.push(arr[i]); count++;}
     }
-    return count;
-}
-console.log(countNaN([NaN, 1, NaN + 1, "a" * 2]))
+    if (count ===0) return null;
+    return Math.min(...newArr);
+}tNaN([NaN, 1, NaN + 1, "a" * 2]))
